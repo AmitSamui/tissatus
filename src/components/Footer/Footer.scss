@@ -1,0 +1,205 @@
+@import "../../variables";
+
+.footer-container {
+  margin-bottom: 0;
+  // position: fixed;
+  // bottom: 0;
+  // z-index: 1;
+  .footer-wrapper {
+    padding-bottom: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-family: "JetBrains Mono", monospace;
+
+    * {
+      font-size: 14px;
+      color: $dark-grey;
+    }
+
+    a {
+      color: $google-blue;
+      font-weight: 700;
+    }
+  }
+}
+
+// .footer-content {
+//   display: flex;
+//   flex-wrap: wrap;
+//   justify-content: space-between;
+//   border-bottom: 1px solid $black-50;
+
+//   .col {
+//     display: flex;
+//     flex-direction: column;
+//     align-items: flex-start;
+//     padding-top: 40px;
+
+//     .col-container {
+//       display: flex;
+//       .col-img {
+//         img {
+//           width: 60px;
+//           margin-right: 16px;
+//         }
+//       }
+//       .col-text {
+//         .title-26 {
+//           margin-top: 8px;
+//           font-weight: 500;
+//           font-size: 28px;
+//         }
+//         .title-20 {
+//           font-weight: 500;
+//           margin-bottom: 1rem;
+//         }
+//         .title-20,
+//         .title-26,
+//         .text-18 {
+//           color: $black-60;
+//         }
+//         .text-18 {
+//           margin-bottom: 0;
+//           line-height: 1.6;
+//           font-size: 16px;
+//           font-weight: 400;
+//         }
+//         .follow {
+//           margin-top: 48px;
+//           h4 {
+//             font-size: 16px;
+//             margin-bottom: 1rem;
+//             color: $dark;
+//             font-weight: 500;
+//           }
+//           .icons {
+//             padding-block: 60px 16px;
+//             display: flex;
+//             gap: 24px;
+//             align-items: center;
+//             a {
+//               display: flex;
+//               align-items: center;
+//               justify-content: center;
+//             }
+//             i {
+//               color: $black-75;
+//               font-size: 20px;
+//               cursor: pointer;
+//             }
+//           }
+//         }
+//       }
+//     }
+//     .nav-links {
+//       padding-top: 50px;
+//       margin-inline: 0 auto;
+//       a {
+//         text-decoration: none;
+//         font-family: "JetBrains Mono", monospace;
+//       }
+//     }
+//   }
+//   .col-two {
+//     margin-top: 12px;
+//     margin-bottom: 20px;
+//   }
+// }
+
+.copyright {
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding-top: 16px;
+  border-top: 1px solid rgb(67, 67, 67);
+
+  img {
+    width: 25px;
+    margin-inline: 12px 6px;
+  }
+  .p1 {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  // .p2 {
+  //   padding-top: 16px;
+  // }
+}
+// @media (max-width: 1305px) {
+//   #footer {
+//     display: block;
+//     .col {
+//       display: flex;
+//       flex-direction: column;
+//       align-items: center;
+//       margin-bottom: 20px;
+//       padding-top: 40px;
+//       .col-container {
+//         padding-left: 0;
+//       }
+//     }
+//     .line {
+//       margin-inline: auto;
+//     }
+//   }
+// }
+
+@media only screen and (max-width: 768px) {
+  .footer-content {
+    .col-one {
+      .col-container {
+        flex-direction: column;
+        .col-text {
+          .title-26 {
+            font-size: 24px;
+          }
+          .title-20 {
+            font-size: 18px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 648px) {
+  .copyright {
+    flex-direction: column;
+    justify-content: center;
+
+    .p1 {
+      justify-content: center;
+    }
+  }
+
+  .footer-wrapper {
+    .text-16 {
+      text-align: center;
+    }
+  }
+}
+
+@media only screen and (max-width: 548px) {
+  .footer-content {
+    .col-one {
+      .col-container {
+        .col-text {
+          .title-26 {
+            font-size: 20px;
+            margin-bottom: 4px;
+          }
+          .title-20 {
+            font-size: 16px;
+          }
+          .text-18 {
+            font-size: 14px;
+            margin-bottom: 8px;
+          }
+        }
+      }
+    }
+  }
+}

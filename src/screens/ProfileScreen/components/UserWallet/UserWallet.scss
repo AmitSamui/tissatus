@@ -1,0 +1,152 @@
+@import "../../../../variables";
+
+.user-wallet-container {
+  .user-wallet-wrapper {
+    min-height: calc(100vh - 272px);
+    max-width: 548px;
+  }
+
+  &.stick-to-top {
+    min-height: calc(100vh - 244px);
+    margin-top: -28px;
+
+    .user-wallet-wrapper {
+      padding: 0rem;
+      max-width: 548px;
+    }
+  }
+}
+
+.user-coin-box {
+  padding: 1.5rem;
+  background-color: $black-light;
+  border-radius: 0 0 40px 40px;
+
+  .coin-box {
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+
+    img {
+      width: 50px;
+    }
+  }
+
+  .text-18 {
+    font-size: 22px;
+  }
+
+  .text-16 {
+    font-size: 14px;
+    color: $text-grey;
+  }
+}
+
+.user-wallet-actions {
+  margin-top: 3rem;
+
+  .action-btn {
+    padding: 1rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    cursor: pointer;
+    margin-bottom: 1rem;
+    transition: background-color 300ms ease-in-out;
+
+    .text-16 {
+      transition: color 300ms ease-in-out;
+    }
+
+    i {
+      color: $accent-blue;
+    }
+
+    &:hover {
+      background-color: $black-light;
+
+      .text-16 {
+        color: $accent-blue;
+      }
+    }
+  }
+}
+
+.user-action-box {
+  .user-action-top-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+
+    i {
+      cursor: pointer;
+      color: $accent-blue;
+    }
+  }
+
+  .form-detail {
+    margin-block: 2rem 6rem;
+  }
+
+  .bottom-button-box {
+    .btn-primary {
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+}
+
+.user-transactions {
+  margin-top: 3rem;
+  padding: 1rem 1.5rem;
+
+  .top-title-bar {
+    margin-bottom: 2rem;
+  }
+
+  .transaction-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    .list-item {
+      padding: 1rem 1.5rem;
+      background-color: $black-light-dark;
+      border-radius: 10px;
+
+      // display: grid;
+      // grid-template-columns: repeat(2, 1fr);
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+
+      .text-detail {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+
+        * {
+          font-size: 16px;
+        }
+
+        .text-18 {
+          color: $dark-grey;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 548px) {
+  .user-wallet-actions {
+    .action-btn {
+      border-radius: 10px;
+    }
+  }
+}

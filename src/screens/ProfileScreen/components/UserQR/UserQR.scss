@@ -1,0 +1,33 @@
+@import "../../../../variables";
+
+.user-qr-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // min-height: calc(100vh - 212px);
+  min-height: calc(100vh - 248px);
+
+  .user-qr-wrapper {
+    text-align: center;
+  }
+}
+
+.user-qr-box {
+  .qr-img-box {
+    #react-qrcode-logo {
+      border-radius: 20px;
+      width: 100% !important;
+      height: 100% !important;
+      max-width: 200px;
+    }
+  }
+
+  .title-26 {
+    margin-block: 2rem 0.5rem;
+  }
+
+  .text-16-para {
+    color: $text-grey;
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,93 @@
+@import "../../variables";
+
+.event-register-wrapper {
+  min-height: calc(100vh - 248px);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  .register-details {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .details-info-form {
+    max-width: 400px;
+    margin-block: 1rem;
+    display: flex;
+    align-items: end;
+
+    .form-detail {
+      width: 100%;
+    }
+  }
+
+  .event-ticket-details {
+    .ticket-purchased {
+      margin-top: 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+
+      img {
+        width: 32px;
+        // height: 20px;
+      }
+
+      span {
+        color: $accent-blue;
+        font-weight: 600;
+      }
+    }
+    .btn-primary {
+      margin-top: 1.5rem;
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+}
+
+.team-members {
+  .text-18 {
+    margin-bottom: 0.5rem;
+  }
+
+  .members {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .member-name {
+    display: flex;
+    align-items: center;
+    .text-16 {
+      font-size: 14px;
+      color: $text-grey;
+    }
+
+    img {
+      width: 12px;
+      //   height: 12px;
+      margin-inline: 0.5rem 0.15rem;
+    }
+
+    & > span {
+      font-size: 10px;
+      color: $accent-blue;
+      font-weight: 600;
+    }
+  }
+}
+
+@media only screen and(max-width: 768px) {
+  .event-register-wrapper {
+    grid-template-columns: auto;
+    gap: 4rem;
+
+    .event-ticket-details {
+      max-width: 500px;
+    }
+  }
+}

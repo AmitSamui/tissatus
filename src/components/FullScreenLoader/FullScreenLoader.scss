@@ -1,0 +1,88 @@
+@import "../../variables";
+
+.full-page-loader {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $dark;
+  z-index: 10000;
+}
+
+.loader__wrapper {
+  position: fixed;
+  height: var(--app-height);
+  width: 100%;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  z-index: 100;
+  svg {
+    width: 20vw;
+    height: 20vw;
+    path {
+      fill: #ffffff00;
+    }
+    .loader_1 {
+      stroke-dasharray: 1000;
+      stroke-dashoffset: 1000;
+      animation: dash 3s linear forwards;
+    }
+    .loader_2 {
+      stroke-dasharray: 1000;
+      stroke-dashoffset: 1000;
+      animation: dash 3s linear forwards;
+      animation-delay: 0.5s;
+    }
+    .loader_3 {
+      stroke-dasharray: 1000;
+      stroke-dashoffset: 1000;
+      animation: dash 3s linear forwards;
+      animation-delay: 0.25s;
+    }
+  }
+  &.fadeOut {
+    animation: fadeOut 1s linear forwards;
+    svg {
+      animation: zoomIn 3s linear forwards;
+    }
+  }
+
+  @keyframes dash {
+    0% {
+      stroke-dashoffset: 1000;
+    }
+    40% {
+      stroke-dashoffset: 600;
+      fill: #ffffffb7;
+    }
+    100% {
+      stroke-dashoffset: 0;
+      fill: #fff;
+    }
+  }
+  @keyframes zoomIn {
+    from {
+      transform: scale(1);
+    }
+    to {
+      transform: scale(50);
+    }
+  }
+  @keyframes fadeOut {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+}

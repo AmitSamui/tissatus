@@ -1,0 +1,19 @@
+@import "../../../../variables";
+
+.user-info-container {
+  margin-bottom: 0;
+  .user-info-wrapper {
+    min-height: calc(100vh - 212px);
+  }
+}
+
+.user-info-img {
+  margin-bottom: 2rem;
+  img {
+    width: 100%;
+    max-width: 100px;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+}
